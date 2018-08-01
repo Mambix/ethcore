@@ -1,4 +1,4 @@
-FROM ubuntu-apache2-php7:7.2
+FROM mobingi/ubuntu-apache2-php7:7.2
 MAINTAINER Mambix Ltd. <ledi.mambix@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
