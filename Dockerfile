@@ -8,13 +8,13 @@ RUN echo "tzdata tzdata/Areas select Europe" > /tmp/preseed.txt; \
   echo "tzdata tzdata/Zones/Europe select London" > /tmp/preseed.txt; \
   debconf-set-selections /tmp/preseed.txt && \
   apt-get update && \
-  apt-get install -y software-properties-common tzdata supervisor apache2
+  apt-get install -y software-properties-common tzdata supervisor apache2 git
 
 RUN add-apt-repository -y ppa:ethereum/ethereum
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     geth \
-    libapache2-mod-php && \
+    libapache2-mod-php \
     php7.2 \
 		# php7.2-bcmath \
 		# php7.2-cli \
