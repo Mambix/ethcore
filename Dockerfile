@@ -26,7 +26,7 @@ ENV APACHE_LOCK_DIR    /var/lock/apache2
 ENV APACHE_LOG_DIR     /var/log/apache2
 ENV LANG               C
 
-CMD ["apache2", "-D", "FOREGROUND"]
+#CMD ["apache2", "-D", "FOREGROUND"]
 
 EXPOSE 80
 
