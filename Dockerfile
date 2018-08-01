@@ -9,9 +9,8 @@ RUN echo "tzdata tzdata/Areas select Europe" > /tmp/preseed.txt; \
   debconf-set-selections /tmp/preseed.txt && \
   apt-get update && apt-get install -y \
   software-properties-common \
-  tzdata
-
-RUN add-apt-repository -y ppa:ethereum/ethereum && apt-get update && apt-get install -y \
+  tzdata && \
+  add-apt-repository -y ppa:ethereum/ethereum && apt-get update && apt-get install -y \
   geth \
   apache2 \
   libapache2-mod-php
