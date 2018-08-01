@@ -42,6 +42,7 @@ RUN a2enmod rewrite
 COPY conf/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY conf/config.php /var/www/html/config.php
 
 COPY script/run.sh /run.sh
 RUN chmod 755 /run.sh
