@@ -10,4 +10,4 @@ RUN add-apt-repository -y ppa:ethereum/ethereum && \
 
 EXPOSE 8545 30303
 
-ENTRYPOINT [ "geth", "--rpc" ]
+ENTRYPOINT [ "geth", "--rpc", "--rpcaddr", "0.0.0.0" ]
