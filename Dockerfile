@@ -8,6 +8,8 @@ RUN add-apt-repository -y ppa:ethereum/ethereum && \
   apt-get update && \
   apt-get install -y geth
 
+COPY run.sh /usr/local/bin/geth.sh
+
 EXPOSE 8545 30303
 
-ENTRYPOINT [ "sh", "-c", "geth --rpc $GETH_CMD_PARAMS" ]
+ENTRYPOINT [ "geth.sh" ]
