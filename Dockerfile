@@ -9,6 +9,7 @@ RUN add-apt-repository -y ppa:ethereum/ethereum && \
   apt-get install -y geth
 
 COPY ./run.sh /
+RUN chmod +x /run.sh
 
 EXPOSE 8545 30303
 
