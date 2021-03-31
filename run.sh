@@ -1,3 +1,3 @@
 #!/bin/bash
 
-geth --rpc $GETH_CMD_PARAMS
+geth --http $GETH_CMD_PARAMS
