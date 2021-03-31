@@ -37,7 +37,16 @@ For example:
 docker run -d --restart=always --name ethcore \
    -p 8545:8545 -p 30303:30303 \
    -v ethcore_data:/root/.ethereum \
-   -e GETH_CMD_PARAMS:"--rpcaddr 0.0.0.0 --cache 4096 --maxpeers 10" \
+   -e GETH_CMD_PARAMS="--http.addr 0.0.0.0 --cache 4096 --maxpeers 10" \
+   mambix/ethcore
+```
+
+## Running goerli testnet
+```
+docker run -d --restart=always --name ethcore_goerli \
+   -p 8546:8546 -p 30304:30304 \
+   -v ethcore_goerli_data:/root/.ethereum/goerli \
+   -e GETH_CMD_PARAMS="--goerli --port 30304 --http.addr 0.0.0.0 --http.port 8546 --cache 4096 --maxpeers 10" \
    mambix/ethcore
 ```
 
